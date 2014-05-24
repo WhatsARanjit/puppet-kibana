@@ -1,7 +1,7 @@
 class kibana (
   $install_dir   = $apache::docroot,
-  $logstash_host = $logstash_reporter::logstash_host,
-  $logstash_port = $logstash_reporter::logstash_port,
+  $logstash_host = '127.0.0.1',
+  $logstash_port = '9200',
   $tarball       = 'kibana-3.1.0'
 ) {
   $source_url = "https://download.elasticsearch.org/kibana/kibana/${tarball}.tar.gz"
