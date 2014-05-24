@@ -1,16 +1,23 @@
-bones
+# puppet-kibana
 
-This is the bones module.
+A Puppet module for managing Kibana.
 
-License
--------
+## Usage Examples
 
+Default configuration where Kibana runs on the Logstash host.
 
-Contact
--------
+    include kibana
 
+## Kibana parameters
 
-Support
--------
+* `install_dir`<br />
+The web root directory in which to install Kibana.  Default: `$apache::docroot`
 
-Please log tickets and issues at our [Projects site](http://projects.example.com)
+* `logstash_host`<br />
+The hostname or IP address of the Logstash daemon.  Default: `$logstash_reporter::logstash_host`
+
+* `logstash_port`<br />
+The port of the Logstash daemon.  Default: `$logstash_reporter::logstash_port`
+
+* `tarball`<br />
+The tarball to be downloaded as https://download.elasticsearch.org/kibana/kibana/${tarball}.tar.gz to specify version of Kibana.  Default `kibana-3.1.0`
