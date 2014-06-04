@@ -1,6 +1,6 @@
 class kibana (
   $install_dir   = $apache::docroot,
-  $logstash_host = '127.0.0.1',
+  $logstash_host = $::ipaddress,
   $logstash_port = '9200',
   $tarball       = 'kibana-3.1.0'
 ) {
