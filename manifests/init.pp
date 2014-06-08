@@ -17,7 +17,7 @@ class kibana (
   }
   exec { 'untar-kibana':
     command     => "tar zxpf ${tarball}.tar.gz --strip-components=1",
-    creates     => "${install_dir}/index.html",
+    creates     => "${install_dir}/README.md",
     refreshonly => true,
   }
   file { "${install_dir}/config.js":
