@@ -8,6 +8,10 @@ Default configuration where Kibana runs on the Logstash host.
 
     include kibana
 
+NOTE: This requires the fork of nanliu-staging available at:
+
+https://github.com/mhaskel/puppet-staging/tree/strip
+
 ## Kibana parameters
 
 * `install_dir`<br />
